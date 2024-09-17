@@ -86,22 +86,14 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed top-40 right-0 w-1/4 h-1/2 rounded-full bg-white z-40 transition-transform duration-300 ease-in-out ${
+          className={`fixed top-40 right-0 w-1/3 h-1/2 rounded-full bg-white z-40 transition-transform duration-300 ease-in-out ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <ul className="flex flex-col items-end gap-6 py-4 px-6">
             {NavbarMenu.map((item) => (
               <li key={item.id} className="text-right">
-                <UpdateFollower
-                  mouseOptions={{
-                    backgroundColor: "black",
-                    zIndex: 9999,
-                    followSpeed: 1.5,
-                    scale: 5,
-                    mixBlendMode: "normal",
-                  }}
-                >
+                
                 <ScrollLink
                   to={item.link}
                   smooth={true}
@@ -113,7 +105,7 @@ const Navbar = () => {
                 >
                   {item.title}
                 </ScrollLink>
-                </UpdateFollower>
+                
               </li>
             ))}
           </ul>
